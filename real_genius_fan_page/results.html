@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Newsletter - Results</title>
+      <!-- 
+         Real Genius Fan Page
+         Filename: results.html
+
+         Author:  David Smith 
+         Date:    December 1, 2017 
+         HTML5 and CSS3 Webproject
+      -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <script src="modernizr.custom.40753.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="main2.css">
+       <link rel="shortcut icon" href="Images/ilovetoxic.jpg">
+      <link rel="apple-touch-icon" href="Images/ilovetoxic.jpg">
+      <link rel="icon" sizes="192x192" href="Images/ilovetoxic.jpg">
+   </head>
+   <body>
+      <p class="skipnavigation"><a href="#contentstart">Skip navigation</a></p> 
+      <header>
+         <h1>Newsletter Submit</h1>
+      </header>
+      <nav class="sitenavigation" id="animation">
+         <p><a href="index.html">Home</a></p>
+         <p><a href="thenandnow.html">Then and Now</a></p>
+         <p><a href="newsletter.html">Newsletter Sign Up</a></p>
+		 <p><a href="http://www.imdb.com/title/tt0089886/trivia">Trivia</a></p>
+         <p><a href="https://en.wikipedia.org/wiki/Real_Genius">Wikipedia Page</a></p>
+      </nav>
+      <article id="contentstart">
+         <div class="container">
+            <h2>Your form has been submitted</h2>
+            <div class="results">
+               <h3>You entered the following data:</h3>
+         
+               <script>
+                   var formData = location.search;
+                   formData = formData.substring(1, formData.length);
+                   while (formData.indexOf("+") !== -1) {
+                      formData = formData.replace("+", " ");
+                   }
+                   formData = decodeURIComponent(formData);
+                   var formArray = formData.split("&");
+                   for (var i = 0; i < formArray.length; i = i + 1) {
+                      document.write("<p>" + formArray[i] + "</p>");
+                   }
+               </script>
+            </div>
+         </div>
+      </article>
+      <footer>
+         <p>Made by David Smith</p>
+      </footer>
+   </body>
+</html>

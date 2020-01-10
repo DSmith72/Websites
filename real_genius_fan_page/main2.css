@@ -1,0 +1,229 @@
+/* 
+   Real Genius Fan Page style sheet 
+   Filename: styles.css
+
+   Author:  David Smith 
+   Date:    November 15, 2017 
+   HTML5 and CSS3 Illustrated Unit H, Lessons
+ */
+ 
+
+/* header section */
+h1{
+   text-align: center;
+   font-family: Bitter, "Times New Roman", Times, serif;
+   font-weight: 700;
+   color: blue;
+   background-color: white;
+   font-size: 2.4em;
+}
+/* skip navigation link */
+p.skipnavigation a {
+   position: absolute;
+   left: -10000px;
+}
+p.skipnavigation a:focus {
+   color: ivory;
+   background-color: #34180f;
+   top: 0.4em;
+   left: auto;
+   right: 0.4em;
+   z-index: 2;
+}
+
+/* site navigation bar */
+nav.sitenavigation {
+   color: red;
+   text-align: center;
+   background-color: white;
+}
+nav.sitenavigation p {
+   margin: 0.3em 0.5em;
+   display: inline-block;
+   font-size: 1.7em;
+}
+nav.sitenavigation a:link {
+   text-decoration: none;
+   color: blue;
+}
+nav.sitenavigation a:visited {
+   color: black;
+}
+nav.sitenavigation a:hover, nav.sitenavigation a:focus {
+   color: blue;
+}
+
+/* form styles */
+form {
+   display: block;
+   float: left;   
+}
+ol {
+   margin-top: 1em;	
+   float: left;
+}
+aside {
+   float: right;
+   margin-top: 1.2em;  
+   margin-right: 4.4em;   
+}
+
+/* field styles */
+fieldset fieldset {
+   padding: 0.8em;
+   margin-right: -2.8em;   
+}
+legend {
+   font-size: 1em;
+   font-weight: bold;
+   font-family: Verdana, Geneva, sans-serif;
+   padding-bottom: 0em;	
+   padding-top: 1.3em;
+   text-align: center;
+}
+span {
+   color: red;	
+}
+.contactinfo input, textarea {
+   border:1px solid #ccc;
+   margin-bottom: 0.4em;
+   font-size: 1em;
+}
+.hear {
+   position: absolute;
+   margin-bottom: 1em;   
+}
+#hear-about {
+   font-size: 1em;	
+}
+#nameinput  {
+   width: 15em; 
+   margin-left: 1.6em;
+}
+#emailinput {
+   width: 15em; 
+   margin-left: 1.5em;
+}
+#phoneinput {
+   width: 15em; 
+   margin-left: 1.4em;	
+}
+#addressinput {
+   width: 15em; 
+   margin-left: 0.6em;
+}
+#cityinput {
+   width: 10em;
+   margin-left: 2.1em;   
+}
+#stateinput {
+   width: 3em; 
+   margin-left: 1.8em;     
+}
+#zipinput {
+   width: 5em; 
+   margin-left: 2.3em;    
+}
+#submit {
+   border: 2px solid black;
+   margin-left: 40em;
+   border-radius: 5px;  
+   padding: 0.2em 0.2em 0.2em 0.2em;  
+   background-color: #d3d3d3;   
+}
+#lunch  {
+   margin-right: 0.2em;
+}
+#dinner {
+   margin-left: 1em;	
+}
+#daily {
+   margin-bottom: 0em;
+}
+#weekly {
+   margin-left: 1em;	
+}
+#date {
+   position: absolute;
+   margin-bottom: 4em;
+}
+
+/* label styles */
+.contactinfo label {
+   font-size: 1em;
+   display: block;
+   position: relative;
+   margin-bottom:0.2em;  
+   text-align: left; 
+   margin-left: 31em;   
+}
+
+/* footer section */
+footer {
+   margin-top: 26em;
+   padding: 0.6em;
+   background-color: white;
+   color: black;
+   text-align: center;
+   border: 1px solid black;
+}
+
+/* small screen/tablet styles */
+@media screen and (max-width: 1100px), print {
+	header {
+	width: auto;	
+	}
+	div form {
+	  width: 50%;
+	  margin: 1em;
+	  margin-left: -0.4em;
+	} 
+	aside {
+	  width: 50%;
+	  float: right;
+    }	  	
+	footer {
+	  display: none;
+	 
+	}
+}   
+
+/* handheld styles */
+@media screen and (max-width: 800px) {
+	header {
+	width: auto;	
+	}
+	div form {
+	  width: 50%;
+	  margin: 1em;
+	  margin-left: -0.4em;
+	} 
+	aside {
+	  width: 50%;
+	  float: right;
+    }	  	
+	footer {
+	  display: none;
+	 
+	}
+}	
+	
+/* print styles */
+@media print {
+   body, h1, article, footer {
+      color: rgb(0,0,0);
+      background: rgb(255,255,255);
+   }
+   body {
+      max-width: 100%;
+   }
+   nav {
+      display: none;
+   }
+   iframe {
+	  display: none;
+   }
+}
+@page {
+   margin: 0.75in;
+}

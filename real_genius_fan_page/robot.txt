@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /thenandnow.html
+Disallow: /index.html
+Disallow: /newsletter.html

@@ -1,0 +1,299 @@
+﻿/* 
+   Real Genius Fan Page style sheet 
+   Filename: styles.css
+
+   Author:  David Smith 
+   Date:    November 15, 2017 
+   HTML5 and CSS3 Webproject
+ */
+
+/* reset styles */
+html {
+   font-size: 16px;
+}
+a, article, body, div, figcaption, figure, footer, header, h1, 
+h2, h3, img, nav, p, section {
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
+img {
+   max-width: 100%;
+   height: auto;
+   width: auto;
+   box-shadow: 0 10px 6px -6px #777;
+}
+
+/* document-wide styles */
+body {
+   margin: 0 auto;
+   font-family: Arial, Helvetica, sans-serif;
+   background: url(Images/popcorn.jpg)
+}
+p {
+   line-height: 1.4em;
+   font-size: 1.3em;
+}
+a:link {
+   color: blue;
+}
+a:visited {
+   color: black;
+}
+a:hover {
+   color: blue;	
+}
+
+/* skip navigation link */
+p.skipnavigation a {
+   position: absolute;
+   left: -10000px;
+}
+p.skipnavigation a:focus {
+   color: ivory;
+   background-color: #34180f;
+   top: 0.4em;
+   left: auto;
+   right: 0.4em;
+   z-index: 2;
+}
+
+/* header section */
+header {
+   margin-top: -0.8em;  
+   background: white;
+}
+h1{
+   text-align: center;
+   font-family: Bitter, "Times New Roman", Times, serif;
+   font-weight: 700;
+   color: blue;
+   background-color: white;
+   font-size: 2.4em;
+   padding-top: 1em;
+   margin-bottom: -1em; 
+   margin-left: 2em;   
+      
+}
+#title {
+	text-align: left;
+	margin-right: 22em;
+    position: relative;
+    cursor: pointer;
+}
+
+/* site navigation bar */
+nav.sitenavigation {
+   color: red;
+   text-align: center;
+   background-color: white;
+}
+nav.sitenavigation p {
+   margin: 0.3em 0.5em 1em 0em;
+   display: inline-block;
+}
+nav.sitenavigation a:link {
+   text-decoration: none;
+   color: blue;
+}
+nav.sitenavigation a:visited {
+   color: black;
+}
+nav.sitenavigation a:hover, nav.sitenavigation a:focus {
+   color: blue;
+}
+
+/* main content */
+article {
+   margin: 0 auto;
+   padding: 0;
+}
+article div {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 0 3% 1em;
+   background-color: ivory;
+   overflow: auto;
+   background: white;
+}
+#animation {
+   margin: 0;
+   width: 100%;
+   -webkit-animation-duration: 1.5s;
+   animation-duration: 1.5s;
+   -webkit-animation-timing-function: ease-in;
+   animation-timing-function: ease-in;
+   -webkit-animation-name: reveal-logo;
+   animation-name: reveal-logo;
+}
+@keyframes reveal-logo {
+    0% {
+         transform: scale(0);
+        left: -150px;
+    }
+    50% {
+        left: -50px;
+    }
+    100% {
+         transform: scale(1);
+        left: 100px;
+    }
+}
+h2 {
+   padding: 0.4em 0.4em 0;
+   text-align: center;
+   font-family: Bitter, "Times New Roman", Times, serif;
+   font-size: 2em;
+   font-weight: 700;
+   color: black;
+}
+h3 {
+   margin: 1.4em 0 0.5em;
+   font-size: 1.6em;
+   font-family: Bitter, "Times New Roman", Times, serif;
+   font-weight: 700;
+   clear: both;
+}
+p {
+   padding: 0.4em 0.4em 0;
+   text-align: center;
+   font-family: Bitter, "Times New Roman", Times, serif;
+   font-size: 1.5em;
+   font-weight: 500; 
+}
+article.quotes p {
+   text-align: left;
+}
+article iframe {
+   margin-left: 7em;
+   border: 1em solid black;   
+}
+.colorbackground {
+   background-color: white;	
+}
+
+/* figures */
+figure {
+   max-width: 50%;
+   margin: 0 0 2% 2%;
+   border: 1px solid #ccc;
+   float: right;
+   background-color: white;
+   box-shadow: 0 10px 6px -6px #777;
+}
+figure img {
+   display: block;
+}
+
+
+/* footer section */
+footer {
+   padding: 0.6em;
+   background-color: ivory;
+   color: blue;
+   text-align: center;
+}
+
+/*standard screen styles */
+@media screen and (max-width: 1500px), print {
+   header {
+	  width: auto;
+      max-width: 1500px;
+      margin-top: -0.6em ;
+      float: none;	 
+   }
+      header h1 {
+	  width: auto;
+	  margin: auto;
+	  padding: 0.8em;
+	  margin-left: -0.68em
+   }  
+   
+   nav.sitenavigation {
+	  margin: 0 auto;
+   }
+}
+
+/* small screen/tablet styles */
+@media screen and (max-width: 1100px), print {
+	header {
+	width: 100%;	
+	}
+	article {
+	  width: 100%
+	} 
+	figure {
+	  width: 100%;
+	  height: auto;
+	  margin-bottom: 1em;
+	  background-image: none;
+	  float: none;
+	}
+	figure img {
+	  display: block;
+	}
+	iframe {
+	  width: 100%;
+	}
+}
+
+/* handheld styles */
+@media screen and (max-width: 800px) {
+	body { 
+	width: 10%;
+	}
+	article {
+	  width: 90%;
+	}
+	header {
+	  margin: 0 95px 0 0;
+	}
+	header h1 {
+	  width: auto;
+	  margin: 0.4em 2%;
+	}
+	nav.sitenavigation {
+	  margin: 16px;
+      position: absolute;
+      top: 0px;
+      right: 0px;	  
+    }
+	nav.sitenavigation a {
+	  width: 83%;
+      border-radius: 0;	  
+	}
+	iframe {
+	  width: 100%;
+	}
+}
+	
+
+/* print styles */
+@media print {
+   article, article h2, aside, body, footer, header, header h1, header p, h3 {
+      color: rgb(0,0,0);
+      background-color: rgb(255,255,255);
+   }
+   header {
+	  margin: 0 0 1em;   
+   }
+   header div {
+	  margin-top: 0;  
+   }
+   header h1 {
+	  margin: 0 auto;  
+   }
+   nav {
+	  display: none;	
+   }
+   figure {
+	  border: 3px solid black;  
+   }
+   iframe {
+	  display: none;
+   }
+}
+
+@page {
+   margin: 0.5in;
+}
